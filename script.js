@@ -83,9 +83,11 @@ let results = [];
     for(let i=0; i<submissions.length;i++){
         const submission = submissions[i];
         let curRec = results.find(res=>res['id']=submission.learner_id)
-        
+        ////finding results of submission according to student id//
         if(curRec==null){
             curRec={id:submission.learner_id,avg:0}
+            //If statement for if currec is null/empty or a found object, and that object has the id
+            //or key of the learner id & avg
         results[results.length]=curRec;
         }
 
