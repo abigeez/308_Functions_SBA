@@ -76,50 +76,77 @@ const LearnerSubmissions = [
     }
 ];
 
-function getLearnerData(course, ag, submissions) {
+// function getLearnerData(course, ag, submissions) {
+//     // here, we would process this data to achieve the desired result.
+// let results = [];
+// //creating the array that will surround the objects
+//     for(let i=0; i<submissions.length;i++){
+//         const submission = submissions[i];
+//         let curRec = results.find(res=>res['id']=submission.learner_id)
+        
+//         ////finding results of submission according to student id//
+//         if(curRec==null){
+//             curRec={id:submission.learner_id}
+//             results[results.length]=curRec;
+//             //If statement for if currec is null/empty or a found object, and that object has the id
+//             //or key of the learner id 
+
+//             const assignment = ag.AssignmentGroup.find(asm=>asm['id']==submission.assignment_id)
+        
+//         }
+
+//         }
+//     return results;
+// }
+
+
+
+
+
+// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+
+// console.log(result);
+
+
+// function getAssignmentScore(course,ag,submission){
+//     for (let i=0;ag.length;i++)
+
+    
+// }
+
+
+
+
+
+
+
+
+
+
+Function getLearnerData(course, ag, submissions) {
     // here, we would process this data to achieve the desired result.
 let results = [];
 //creating the array that will surround the objects
-    for(let i=0; i<submissions.length;i++){
-        const submission = submissions[i];
-        let curRec = results.find(res=>res['id']=submission.learner_id)
-        ////finding results of submission according to student id//
-        if(curRec==null){
-            curRec={id:submission.learner_id,avg:0}
-            //If statement for if currec is null/empty or a found object, and that object has the id
-            //or key of the learner id & avg
-        results[results.length]=curRec;
+    let course = CourseInfo[i];
+        for (i=0;i>course.length;i++) {
+            if(course = true) {
+                continue;
+                else{
+                    break;
+                }
+            }
+            
         }
-
-        }
-    return results;
-}
+            
 
 
 
 
-
-const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-
-console.log(result);
-
-
-function getAssignmentScore(course,ag,submission){
     
+        
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
