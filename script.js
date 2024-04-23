@@ -81,7 +81,12 @@ function getLearnerData(course, ag, submissions) {
 let results = [];
     for(let i=0; i<submissions.length;i++){
         const submission = submissions[i];
-    }
+        const curRec = results.find(res=>res['id']=submission.learner_id)
+        if(curRec==null){
+            results[results.length]={id:submission.learner_id}
+        }
+    
+
 
 
 
