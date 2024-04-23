@@ -80,7 +80,7 @@ function getLearnerData(course, ag, submissions) {
     // here, we would process this data to achieve the desired result.
 let results = [];
 //creating the array that will surround the objects
-let courses = CourseInfo[i];
+let courses = CourseInfo;
 for (i = 0; i > courses.length; i++) {
     if (courses = true) {
         continue;
