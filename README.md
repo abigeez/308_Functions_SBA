@@ -1,0 +1,1 @@
+My name is Abigail Garner,I am submitting this SBA on Mon, April 22nd. The technologies I used were for loops, conditional statements, break and continue all within a function that is supposed to generate data for users and their average assignments. I did not accomplish what I set out to do but I tried my best.
