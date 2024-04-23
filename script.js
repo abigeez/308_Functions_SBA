@@ -75,11 +75,11 @@ const LearnerSubmissions = [
         }
     }
 ];
-
-// function getLearnerData(course, ag, submissions) {
-//     // here, we would process this data to achieve the desired result.
-// let results = [];
-// //creating the array that will surround the objects
+////////////////////////////assignment /////////////////////////////
+function getLearnerData(course, ag, submissions) {
+    // here, we would process this data to achieve the desired result.
+let results = [];
+//creating the array that will surround the objects
 let courses = CourseInfo[i];
 for (i = 0; i > courses.length; i++) {
     if (courses = true) {
@@ -88,92 +88,31 @@ for (i = 0; i > courses.length; i++) {
         break;
     }
 }
+///checking if the info is valid with the course info, if not the loop will break and exit.
+    for(let i=0; i<submissions.length;i++){
+        const submission = submissions[i];
+        let curRec = results.find(res=>res['id']=submission.learner_id)
 
-//     for(let i=0; i<submissions.length;i++){
-//         const submission = submissions[i];
-//         let curRec = results.find(res=>res['id']=submission.learner_id)
+        ////finding results of submission according to student id//
+        if(curRec==null){
+            curRec={id:submission.learner_id}
+            results[results.length]=curRec;
+            //If statement for if currec is null/empty or a found object, and that object has the id
+            //or key of the learner id 
 
-//         ////finding results of submission according to student id//
-//         if(curRec==null){
-//             curRec={id:submission.learner_id}
-//             results[results.length]=curRec;
-//             //If statement for if currec is null/empty or a found object, and that object has the id
-//             //or key of the learner id 
+            const assignment = ag.AssignmentGroup.find(asm=>asm['id']==submission.assignment_id)
 
-//             const assignment = ag.AssignmentGroup.find(asm=>asm['id']==submission.assignment_id)
+        }
 
-//         }
-
-//         }
-//     return results;
-// }
-
-
-
-
-
-// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-
-// console.log(result);
-
-
-// function getAssignmentScore(course,ag,submission){
-//     for (let i=0;ag.length;i++)
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-function getLearnerData(course, ag, submissions) {
-    // here, we would process this data to achieve the desired result.
-    let results = [];
-    //creating the array that will surround the objects
-
-    let submission = LearnerSubmissions[i];
-
-    for (i = 0; i <)
-        learnSign = { learnerid: submission.learner_id, assignmentid: submission.assignment_id }
-
-    console.log(learnSign)
-
-
-
-
-
+        }
+    return results;
 }
 
 
 
 
 
-//     const result = [
-//         {
-//             id: 125,
-//             avg: 0.985, // (47 + 150) / (50 + 150)
-//             1: 0.94, // 47 / 50
-//             2: 1.0 // 150 / 150
-//         },
-//         {
-//             id: 132,
-//             avg: 0.82, // (39 + 125) / (50 + 150)
-//             1: 0.78, // 39 / 50
-//             2: 0.833 // late: (140 - 15) / 150
-//         }
-//     ];
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
-//     return result;
-// }
-
-// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-
-// console.log(result);
-
+console.log(result);
 
