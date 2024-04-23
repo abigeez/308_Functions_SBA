@@ -79,26 +79,44 @@ const LearnerSubmissions = [
 function getLearnerData(course, ag, submissions) {
     // here, we would process this data to achieve the desired result.
 let results = [];
+//creating the array that will surround the objects
     for(let i=0; i<submissions.length;i++){
         const submission = submissions[i];
-        const curRec = results.find(res=>res['id']=submission.learner_id)
+        let curRec = results.find(res=>res['id']=submission.learner_id)
+        
         if(curRec==null){
-            results[results.length]={id:submission.learner_id}
+            curRec={id:submission.learner_id,avg:0}
+        results[results.length]=curRec;
         }
-    
 
-
-
-
-
-
-
-
-
-
-
-
+        }
+    return results;
 }
+
+
+
+
+
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+
+console.log(result);
+
+
+function getAssignmentScore(course,ag,submission){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
